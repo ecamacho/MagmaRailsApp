@@ -12,7 +12,7 @@ class VenueController < UIViewController
 	end
 
 	def viewDidLoad	
-		navigationItem.title = "Lugar"
+		navigationItem.title = "Sede"
 		navigationController.navigationBar.tintColor = UIColor.colorWithRed( 255/100, green:0.0, blue:0.0, alpha:1.0)
 		marker = venue_marker
 		@map.addAnnotation marker

@@ -38,7 +38,7 @@ class AppDelegate
   def venueController
     venueController = VenueController.alloc.init    
     navController = UINavigationController.alloc.initWithRootViewController venueController    
-    navController.tabBarItem = UITabBarItem.alloc.initWithTitle('Venue', image:UIImage.imageNamed('map.png'), tag:4)
+    navController.tabBarItem = UITabBarItem.alloc.initWithTitle('Sede', image:UIImage.imageNamed('map.png'), tag:4)
     
     navController    
   end 
