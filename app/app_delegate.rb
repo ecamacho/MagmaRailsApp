@@ -20,10 +20,11 @@ class AppDelegate
   end	
 
   def scheduleController
-    scheduleController = ScheduleController.alloc.init    
+    scheduleController = ScheduleController.alloc.initWithNibName('ScheduleView', bundle:nil)        
     
     navController = UINavigationController.alloc.initWithRootViewController scheduleController
     navController.tabBarItem = UITabBarItem.alloc.initWithTitle('Agenda', image:UIImage.imageNamed('calendar.png'), tag:2)
+    navController.navigationBar.tintColor = UIColor.colorWithRed( 255/100, green:0.0, blue:0.0, alpha:1.0)
     navController    
   end 
 
