@@ -5,7 +5,7 @@ App iOS de la conferencia MagmaRails 3 con RubyMotion
 Info
 -------------
 App de ejemplo con la información de la conferencia [MagmaRails 2012](http://www.magmarails.com)
-hecha por Erick Camacho. Esta no es una app sin vinculos con la organización oficial del evento.
+hecha por Erick Camacho. Esta app no es oficial ni tiene vinculos con la organización del evento.
 
 App desarrollada usando Ruby con la implementación de RubyMotion para iOS.
 
