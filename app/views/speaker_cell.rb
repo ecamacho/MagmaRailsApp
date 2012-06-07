@@ -1,5 +1,6 @@
 class SpeakerCell < UITableViewCell
-	CellID = 'SpeakerCell'
+	
+  CellID = 'SpeakerCell'
 
 	def self.cellForSpeaker(speaker, inTableView:tableView)
     cell = tableView.dequeueReusableCellWithIdentifier(SpeakerCell::CellID) || SpeakerCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier:CellID)

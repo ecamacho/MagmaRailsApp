@@ -24,6 +24,7 @@ class ScheduleController < UIViewController
 
 		@segmentedControl.tintColor = magmaOrangeColor
 		@tableView.dataSource = self
+		@tableView.delegate = self
 	end	
 
 	def changeDay(sender)		
@@ -47,16 +48,15 @@ class ScheduleController < UIViewController
       	@talks.size
     end  
 
-    CELLID = 'ItemCellIdentifier'
+    
   	def tableView(tableView, cellForRowAtIndexPath:indexPath)
-   		cell = tableView.dequeueReusableCellWithIdentifier(CELLID) || 
-   		begin
-   	  		cell = UITableViewCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier:CELLID)
-     			cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton
-     		cell
-	   	end    	
-   		cell.textLabel.text = 'a'
-   		cell
+   		talk = @talks[indexPath.row]
+    	TalkCell.cellForTalk talk, inTableView:tableView
+  	end
+
+  	#uitableview delegate methods
+  	def tableView(tableView, heightForRowAtIndexPath:indexPath)
+    	80
   	end
   
 end	
