@@ -31,13 +31,14 @@ class SpeakersController < UITableViewController
   end
 
   
-
-  def tableView(tableView, accessoryButtonTappedForRowWithIndexPath:indexPath)
-   	#item = @speakers[indexPath.row]
-   	#puts "item selected #{item}"
-    	#detailViewController = DetailViewController.alloc.init
-    	#detailViewController.item = item
-    	#navigationController.pushViewController(detailViewController, animated:true)
+  def tableView(tableView, didSelectRowAtIndexPath:indexPath)
+   	speaker = speakerForIndexPath indexPath
+    
+    speakerController = SpeakerController.alloc.initWithNibName('SpeakerView', bundle:nil)    
+    
+    speakerController.speaker = speaker
+    
+   	navigationController.pushViewController speakerController, animated:true
   end
 
   
